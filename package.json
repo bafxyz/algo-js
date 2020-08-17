@@ -4,6 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
+        "start": "npm run config; npm run test",
         "config": "mhy config prettier jest -u",
         "test": "mhy jest --watch"
     },
