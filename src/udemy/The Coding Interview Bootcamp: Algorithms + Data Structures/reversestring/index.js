@@ -6,37 +6,44 @@
 //   reverse('hello') === 'olleh'
 //   reverse('Greetings!') === '!sgniteerG'
 
-const reverse = str => str.split('').reduce((reversed, char) => char + reversed, '')
+const reverse = str => {
+    // 1. -------------------
+    const reversed = [...str].reverse().join('')
 
-// const reverse = str => {
-//     let reversed = ''
+    // 2. -------------------
+    // const reversed = str.split('').reverse().join('')
 
-//     for (let char of str) {
-//         reversed = char + reversed
-//     }
+    // 3. -------------------
+    // const reversed = [...str].reduce((acc, char) => char + acc, '')
 
-//     return reversed
-// }
+    // 4. -------------------
+    // let reversed = ''
 
-// const reverse = str => {
-//     const arr = []
+    // for (const char of str) {
+    //     reversed = char + reversed
+    // }
 
-//     for (let char of str) {
-//         arr.push(char)
-//     }
+    // 5. -------------------
+    // let reversed = ''
 
-//     let result = ''
+    // for (let char of str) {
+    //     reversed = char + reversed
+    // }
 
-//     for (let i = 0; i < str.length; i++) {
-//         result += arr.pop()
-//     }
+    // 6. -------------------
+    // const arr = []
 
-//     return result
-// }
+    // for (let char of str) {
+    //     arr.push(char)
+    // }
 
-// const reverse = str => [...str].reverse().join('')
-// const reverse = str => {
-//     return str.split('').reverse().join('')
-// }
+    // let reversed = ''
+
+    // for (let i = 0; i < str.length; i++) {
+    //     reversed += arr.pop()
+    // }
+
+    return reversed
+}
 
 module.exports = reverse
