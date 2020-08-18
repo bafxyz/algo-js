@@ -9,13 +9,12 @@
 
 // Downside of this solution what we are comparing the elements 2 times after the middle element.
 function palindrome(str) {
-    return str.split('').every((char, index) => char === str[str.length - 1 - index])
+    // 1. -------------------
+    return [...str].every((char, index) => str[str.length - index - 1] === char)
+
+    // 2. -------------------
+    // const reversed = [...str].reduce((acc, curr) => curr + acc)
+    // return str === reversed
 }
-
-// function palindrome(str) {
-//     const reversed = str.split('').reduce((rev, char) => char + rev, '')
-
-//     return str === reversed
-// }
 
 module.exports = palindrome
