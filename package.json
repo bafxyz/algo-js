@@ -6,7 +6,7 @@
     "scripts": {
         "start": "npm run config; npm run test",
         "config": "mhy config prettier jest -u",
-        "test": "mhy jest --watch"
+        "test": "jest --watch"
     },
     "jest": {
         "testEnvironment": "node"
@@ -16,7 +16,8 @@
     "devDependencies": {
         "@commitlint/cli": "^11.0.0",
         "@commitlint/config-conventional": "^11.0.0",
-        "husky": "^4.3.0"
+        "husky": "^4.3.0",
+        "jest": "^26.4.2"
     },
     "husky": {
         "hooks": {
